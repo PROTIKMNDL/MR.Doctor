@@ -1,0 +1,36 @@
+.related-post-wrapper {
+	margin-top: 1.5rem;
+	.related-post-title{
+		margin-bottom: 1.5rem;
+	}
+    .related-post-sldider {
+
+        .blogshop-standard-post {
+            &__post-title {
+                h4 {
+                    margin-top: .5rem;
+                    margin-bottom: 0.9rem;
+                }
+            }
+
+        }
+
+        .owl-nav {
+            button {
+                @include icon;
+                position: absolute;
+                top: 50%;
+                margin-top: -1.5625rem;
+
+                &.owl-next {
+                    right: 0.625rem;
+                }
+
+                &.owl-prev {
+                    left: 0.625rem;
+                }
+            }
+        }
+
+    }
+}

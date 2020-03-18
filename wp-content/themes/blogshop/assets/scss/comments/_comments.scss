@@ -1,0 +1,83 @@
+.comments-area {
+    .comments-title{
+        margin-bottom: 1.8rem;
+    }
+    form#commentform p a {
+        text-decoration: none;
+    }
+
+    ol.comment-list {
+        @include resetUlOl;
+
+        .depth-1.parent {
+            @include mQ(47.9375rem) {
+                border: 1px solid $softyellow;
+                padding: 1rem;
+                margin-bottom: 1.2rem;
+            }
+        }
+
+        ol.children,
+        ul.children {
+            list-style: none;
+            padding-left: 0;
+
+            @include mQ(47.9375rem) {
+                padding-left: 0;
+                margin-left: 0;
+            }
+
+            .commnenter-details {
+                width: calc(100% - 6.25rem);
+
+                @include mQ(47.9375rem) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .single-comment {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 2rem;
+
+            @include mQ(47.9375rem) {
+                display: block;
+            }
+
+            .commenter-image {
+                width: 6.25rem;
+                margin-right: 0.625rem;
+
+                img {
+                    border-radius: 50%;
+                }
+            }
+
+            .commnenter-details {
+                max-width: 100%;
+                width: calc(100% - 6.25rem);
+                @include mQ(47.9375rem) {
+                    width: 100%;
+                }
+                h4 {
+                    margin-top: 0;
+                    font-size: 1rem;
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .reply a {
+                @include button(.220rem);
+                line-height: 1.4;
+            }
+        }
+    }
+    .comment-form button.btn.btn-primary:hover{
+        background-color: $black;
+        color: $white;
+    }
+}

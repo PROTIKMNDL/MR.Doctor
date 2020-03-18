@@ -1,0 +1,33 @@
+.newsletter-three{
+    background-color: rgba(238, 238, 238, .5);
+}
+
+.news-letter-three-content {
+    background: rgba(238, 238, 238, .5);
+    padding: 2rem 1rem;
+    border-radius: 2rem;
+    h2 {
+        color: $softyellow;
+    }
+}
+
+
+.news-letter-three-content .three-news-letter-form form input[type="email"] {
+    width: 25rem;
+    border-radius: 3.125rem;
+    padding-left: 1rem;
+}
+
+.three-news-letter-form form input[type="submit"] {
+    background: $black;
+    color: $white;
+    margin-left: -3rem;
+    border-radius: 3.125rem;
+    height: 3.1875rem;
+    border: 0;
+}
+
+.three-news-letter-form form p {
+    display: flex;
+    justify-content: center;
+}

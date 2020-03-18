@@ -1,0 +1,33 @@
+ul.recent-post-widget {
+    text-align: center;
+
+    .recent-post-thumb img {
+        display: block;
+    }
+
+    h5 {
+        margin-top: 1rem;
+    }
+
+    .posted_by {
+        display: inline-block;
+
+        a {
+            display: block;
+
+            img {
+                border-radius: 50%;
+                margin-right: 0.625rem;
+
+            }
+
+            i {
+                display: inline-block;
+                vertical-align: top;
+
+            }
+        }
+    }
+
+
+}

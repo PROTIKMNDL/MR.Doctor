@@ -1,0 +1,183 @@
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+
+.widget-area{
+    @include mQ(767px){
+        margin-top: 3.75rem;
+    }
+}
+.widget {
+    margin: 0 0 1.5em;
+    margin-bottom: 1.875rem;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    .widget-title,
+    .widgettitle {
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        position: relative;
+        border-bottom: 1px solid $softwhite;
+        margin-top: 0;
+        &:before {
+            width: 3.1rem;
+            height: .1875rem;
+            background-color: $softyellow;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            content: "";
+        }
+    }
+
+    select {
+        max-width: 100%;
+        width: 100%;
+        height: 2.5rem;
+        border-color: $softwhite;
+    }
+    .tagcloud{
+        a{
+            color: $black;
+            border: 1px solid $softyellow;
+            background-color: $white;
+            display: inline-block;
+            text-decoration: none;
+            padding: 0.625rem;
+            margin: 0.1rem;
+        }
+    }
+    ul,
+    ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            border-bottom: 1px solid $softwhite;
+            padding-bottom: .5rem;
+            margin-bottom: .5rem;
+
+            a {
+                text-decoration: none;
+
+                &:hover,
+                &:visited,
+                &:focus,
+                &:active {
+                    text-decoration: underline;
+                }
+            }
+            
+        }
+
+        ul,
+        ol {
+            padding-left: 0.625rem;
+            margin: 0;
+            list-style: none;
+            li{
+                &:last-child{
+                    border-bottom: 0;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &_search {
+        input {
+            height: 3rem;
+            width: calc(100% - 3rem);
+            float: left;
+            border: 1px solid $softwhite;
+            padding-left: .8rem;
+            border-radius: 0;
+            &:focus{
+            	outline: none;
+				border-color: $softyellow;
+            }
+        }
+
+        button {
+            height: 3rem;
+            width: 3rem;
+            background-color: $black;
+            border-radius: 0;
+            border: 1px solid $black;
+            color: $white;
+            font-size: 1.1rem;
+            text-align: center;
+            padding: 0;
+        }
+    }
+}
+
+
+
+.searchform-area {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: $white;
+    top: 0;
+    left: 0;
+    z-index: 55;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .6s;
+    transform: scale(.5, .5);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.searchform-area.show {
+    transform: scale(1, 1);
+    visibility: visible;
+    z-index: 1030;
+    opacity: 1;
+}
+
+.search-close {
+    position: absolute;
+    right: 70px;
+    top: 70px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.search-close i {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid $softwhite;
+    border-radius: 50px;
+    color: $softyellow;
+    background: $softwhite;
+}
+
+.search-popup div {
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.search-form-inner {
+    width: 100%;
+}
+
+.search-form-inner .sidebarsearch .form-group input {
+    width: calc(100% - 150px);
+    height: 5rem;
+    padding-left: 2rem;
+}
+
+.search-form-inner .sidebarsearch .form-group {
+    display: flex;
+}
+
+.search-form-inner .sidebarsearch .form-group button {
+    width: 150px;
+}

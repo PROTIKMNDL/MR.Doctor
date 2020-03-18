@@ -1,0 +1,380 @@
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+header#masthead {
+    background: $white;
+}
+div#mainmenu {
+    background: $white;
+}
+div#content {
+    width: 1200px;
+    margin: 0 auto;
+    background: $white;
+    max-width: 100%;
+}
+.blogshop-standard-post {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $softwhite;
+    
+    &__entry-content {
+        padding: 0;
+        border: none;
+    }
+    @include page_default_heade;
+    &.sticky {
+        &:before {
+            position: absolute;
+            content: "\f02e";
+            font-family: 'fontawesome';
+            right: 1rem;
+            background: transparent;
+            color: $softyellow;
+            top: 0;
+        }
+    }
+
+    .post-header {
+        position: relative;
+
+        iframe {
+            margin: 0 auto;
+        }
+    }
+
+    &__thumbnail {
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &__categories {
+        margin-bottom: .5rem;
+
+        >span.cat-links {
+            a {
+                color: $softyellow;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__posted-date {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        z-index: 5;
+
+        &.position-static {
+            margin-bottom: 1.25rem;
+            position: static;
+        }
+
+        .posted-on {
+            a {
+                @include button(0.375rem, 1rem, 0.8125rem, 0);
+                line-height: 1.4;
+            }
+        }
+    }
+
+    &__share-wrapper {
+        border-top: 1px solid $softwhite;
+        border-bottom: 1px solid $softwhite;
+        margin-top: 1rem;
+        width: 100%;
+        padding: 1rem 0;
+        .blogshop-standard-post__social-share {
+            margin-top: 0;
+        }
+    }
+
+    &__social-share {
+        margin-top: 1.8rem;
+
+        a,
+        strong {
+            margin: 0.625rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: inline-block;
+
+            @include mQ(767px) {
+                margin-right: 0.425rem;
+                margin-left: 0.425rem;
+            }
+
+            @include mQ(61.9375rem, 74.9375rem) {
+                margin-right: 0.4rem;
+                margin-left: 0.4rem;
+            }
+        }
+    }
+
+    &__blog-meta {
+        display: flex;
+        flex-direction: row;
+        margin: 1.8rem 0 .5rem 0;
+        text-transform: uppercase;
+        &.align {
+            &-center {
+                justify-content: center;
+            }
+
+            &-left {
+                justify-content: left;
+            }
+
+            &-right {
+                justify-content: flex-end;
+            }
+        }
+
+        @include mQ(767px) {
+            margin-right: 0;
+            margin-left: 0;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        >span {
+            margin-right: 1.25rem;
+
+            i {
+                font-style: normal;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.edit-link {
+                a {
+                    @include button(0.4375rem, 1rem, 0.8125rem);
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            .fa {
+                margin-right: 0.625rem;
+            }
+
+            &.posted_by {
+                display: inline-block;
+
+                a {
+                    display: block;
+
+                    img {
+                        border-radius: 50%;
+                        margin-right: 0.625rem;
+
+                    }
+
+                    i {
+                        display: inline-block;
+                        vertical-align: top;
+
+                    }
+                }
+            }
+
+            &.comments-link {
+                display: inline-block;
+
+            }
+        }
+    }
+
+    &__tags {
+
+        span.tags-links {
+            font-weight: 700;
+            text-decoration: none;
+
+            a {
+                font-weight: 700;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__post-title {
+
+
+        a {
+            text-decoration: none;
+
+            h2,
+            h3 {
+                margin-top: 0;
+                margin-bottom: 1.25rem;
+                line-height: 1.4;
+
+                @include mQ(767px) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+    }
+
+    &__readmore {
+        margin-top: 1.875rem;
+
+        a {
+            @include button;
+            border-radius: 0;
+        }
+    }
+
+    .post-gallery {
+        .owl-nav {
+            button {
+                @include icon;
+                position: absolute;
+                top: 50%;
+                margin-top: -1.5625rem;
+
+                &.owl-next {
+                    right: 0.625rem;
+                }
+
+                &.owl-prev {
+                    left: 0.625rem;
+                }
+            }
+        }
+    }
+
+}
+
+.blogshop-single-page {
+    .entry-footer {
+        a {
+            @include button;
+            line-height: 1;
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+.sticky {
+    display: block;
+}
+
+.post,
+.page {
+    margin: 0 0 2.5em;
+}
+
+.updated:not(.published) {
+    display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+    margin: 1.5em 0 0;
+    margin-top: 0;
+}
+
+.page-links {
+    clear: both;
+    margin: 0 0 1.5em;
+}
+
+
+
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+
+.comment-content a {
+    word-wrap: break-word;
+}
+
+.bypostauthor {
+    display: block;
+}
+
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+    /* Theme Footer (when set to scrolling) */
+    display: none;
+}
+
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+
+.infinity-end.neverending .site-footer {
+    display: block;
+}
+
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+    border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+    max-width: 100%;
+    display: block;
+
+    // margin: 0 auto;
+    @include mQ(767px) {
+        height: auto;
+    }
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+    display: inline-block;
+}
+
+body.page {
+    margin-bottom: 0;
+}
+
+.blogshop-single-page, .archive-page-section {
+    @include page_default_heade;
+    
+}
+.blogshop-single-page{
+    .title-breadcrumb-inner{
+        border-bottom: 0;
+        margin-bottom: 0;
+        .page-title{
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,182 @@
+.header-four-menu-area {
+    padding: .625rem 0;
+
+    .site-branding-area {
+        @include mQ(767px) {
+            text-align: left;
+            padding-bottom: 0;
+        }
+    }
+
+    @include mQ(767px) {
+
+        .mobile-search-btn {
+            display: block;
+
+            .search-popup {
+                text-align: right;
+
+                >div {
+                    @include icon;
+                }
+            }
+        }
+    }
+
+    .search-popup {
+        >div {
+            cursor: pointer;
+        }
+
+        @includ mQ(767px) {
+            display: block;
+        }
+
+    }
+
+    .search-menu ul {
+        @include resetUlOl;
+
+    }
+
+    .col-custom-menu {
+        #cssmenu {
+            @include mQ(767px) {
+                text-align: left !important;
+
+                li.search-form-li {
+                    display: none;
+                }
+            }
+        }
+    }
+
+
+    .search-menu {
+        @include mQ(767px) {
+            display: none;
+        }
+    }
+}
+
+.header-one {
+    padding: 1.5rem 0 0 0;
+
+    .menu-area {
+        border-top: 1px solid $softwhite;
+        border-bottom: 1px solid $softwhite;
+        margin-top: 1.5rem;
+        padding: 0.625rem;
+    }
+
+    #cssmenu {
+        text-align: center;
+
+        @include mQ(767px) {
+            text-align: left;
+        }
+    }
+}
+
+.site-branding {
+    .site-title a {
+        text-decoration: none;
+    }
+}
+
+.header-three {
+    .logo-area {
+        padding: 1rem 0;
+    }
+
+    .social-link-top {
+        @include mQ(768px, 991px) {
+            text-align: center;
+        }
+
+        @include mQ(767px) {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        a {
+            @include icon;
+        }
+    }
+
+    #cssmenu {
+        text-align: center;
+
+        @include mQ(767px) {
+            text-align: left;
+        }
+    }
+
+    .search-popup {
+        text-align: right;
+
+        @include mQ(767px) {
+            text-align: left;
+        }
+
+        >div {
+            @include icon;
+            cursor: pointer;
+        }
+    }
+
+    .mini-shopping-cart-inner {
+        position: relative;
+        display: inline-block;
+
+        .btn-icon {
+            a {
+                @include icon;
+            }
+        }
+    }
+
+    div#minicarcount {
+        background: transparent !important;
+        position: absolute;
+        right: .4375rem;
+        top: -2px;
+        border-radius: 3.125rem;
+        font-weight: 700;
+        color: $white;
+    }
+
+    .menu-area {
+        padding: 1rem 0;
+        border-bottom: 1px solid $softwhite;
+        border-top: 1px solid $softwhite;
+    }
+}
+
+.page-banner-area {
+    min-height: 25rem;
+    color: $black;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    h1 {
+        margin-top: 0;
+        color: $white;
+    }
+
+    &:before {
+        position: absolute;
+        content: "";
+        background: rgba(0, 0, 0, .2);
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    .breadcrumb a {
+        font-weight: 700;
+        color: #5bca8c;
+    }
+}

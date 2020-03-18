@@ -1,0 +1,80 @@
+.pagination {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-top: 1.25rem;
+    padding: 0;
+    margin-left: 0;
+    &-center{
+        justify-content: center;
+        display: flex;
+    }
+    &-left{
+        justify-content: left;
+        display: flex;
+    }
+    &-right{
+        justify-content: flex-end;
+        display: flex;
+    }
+
+    li.page-item {
+        a,
+        span {
+            padding: 0.625rem 0.825rem;
+            color: $white;
+            text-decoration: none;
+            margin: 0.1rem;
+
+            &:hover, &.current {
+                background-color: $black;
+                color: $white;
+            }
+        }
+    }
+}
+
+.single-post-navigation {
+    a {
+        text-decoration: none;
+        font-weight: 700;
+        color: $black
+    }
+}
+@mixin stylePaginateLinks{
+    .page-numbers {
+        border: 0 !important;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        li {
+            border: 0 !important;
+
+            a,
+            span {
+                padding: 0.625rem 0.825rem !important;
+                color: $white !important;
+                text-decoration: none;
+                margin: 0.1rem !important;
+                background-color: $softyellow;
+                &:hover {
+                    background-color: $black !important;
+                    color: $white !important;
+                }
+            }
+
+            span {
+                &.current {
+                    background-color: $black !important;
+                }
+            }
+        }
+    }
+}
+@include stylePaginateLinks;
+.woocommerce-pagination {
+    @include stylePaginateLinks;
+}

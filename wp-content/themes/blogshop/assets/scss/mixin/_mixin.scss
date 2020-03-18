@@ -1,0 +1,110 @@
+@mixin icon($width: 2.5rem, $height: 2.5rem, $lineheight: 2.5rem) {
+    width: $width;
+    display: inline-block;
+    height: $height;
+    border: 1px solid transparent;
+    text-align: center;
+    line-height: $lineheight;
+    border-radius: 50%;
+    text-decoration: none;
+    color: $white;
+    background-color: $softyellow;
+
+    &:hover {
+        background-color: $black;
+        color: $white;
+        border-color: $black;
+    }
+}
+
+@mixin resetUlOl {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+@mixin mQ($args...) {
+    @if length($args)==1 {
+        @media only screen and (max-width: nth($args, 1)) {
+            @content;
+        }
+    }
+
+    @if length($args)==2 {
+        @media only screen and (min-width: nth($args, 1)) and (max-width:nth($args, 2)) {
+            @content;
+        }
+    }
+}
+
+@mixin hoverUnderline {
+    &:hover {
+        &:before {
+            width: 100%;
+        }
+    }
+
+    &:before {
+        position: absolute;
+        height: 0.125rem;
+        content: "";
+        background-color: $black;
+        width: 0%;
+        bottom: 0;
+        left: 0;
+        transition: .6s;
+    }
+}
+
+@mixin button($pl: 0.625rem, $pr: 1.25rem, $fn: 1rem, $borr: 3.125rem) {
+    display: inline-block;
+    padding: $pl $pr;
+    background-color: $softyellow;
+    text-decoration: none;
+    color: $white;
+    font-size: $fn;
+    border-radius: $borr;
+
+    &:hover {
+        background-color: $black;
+        color: $white;
+    }
+}
+
+@mixin owlNav {
+    .owl-nav {
+        button {
+            @include icon;
+            position: absolute;
+            top: 50%;
+            margin-top: -1.5625rem;
+
+            // @include mQ(767px) {
+            //     margin-top: -4rem;
+            // }
+
+            &.owl-next {
+                right: 0.625rem;
+            }
+
+            &.owl-prev {
+                left: 0.625rem;
+            }
+        }
+    }
+}
+
+@mixin page_default_heade{
+    .title-breadcrumb-inner {
+        border-bottom: 1px solid $softwhite;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        .entry-title, .page-title {
+            margin-top: 0;
+        }
+        .breadcrumb a {
+            text-decoration: none;
+            color: $softyellow;
+        }
+    }
+}

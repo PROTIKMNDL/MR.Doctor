@@ -1,0 +1,25 @@
+.scrooltotop {
+    a {
+        @include icon;
+        right: 1.25rem;
+        bottom: 1.25rem;
+        position: fixed;
+        z-index: 5;
+    }
+}
+
+.social-link-footer {
+    a {
+        @include icon;
+        right: 1.25rem;
+        bottom: 1.25rem;
+        z-index: 5;
+    }
+}
+
+footer#colophon {
+    padding: 1rem 0;
+    border-top: 1px solid $softwhite;
+    position: relative;
+    background-color: $white;
+}
